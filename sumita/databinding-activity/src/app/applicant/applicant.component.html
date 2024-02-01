@@ -1,0 +1,24 @@
+
+<!-- displaying applicant name using STRING INTERPOLATION -->
+<h1>Activity 1</h1>
+<h1 [style.color]="headerColor" >{{applicantName}}</h1>
+
+<h1>Activity 2</h1>
+<!-- PROPERTY BINDING -->
+<button [disabled]="disableValue" >Apply Now</button>
+<!-- <button disabled>click</button> -->
+<h1>Activity 3</h1>
+<!-- EVENT BINDING-->
+<button (click)="onClick()">Submit</button>
+
+<h1>Activity 4</h1>
+<!-- TWO WAY DATA BINDING -->
+<br><br>
+<span>Enter your name</span>
+<input [(ngModel)]="name" /><br>
+<span>Enter your email</span> 
+<input [(ngModel)]="email" /><br><br>
+<p>The name entered is {{ name }}!</p>
+<p>The email entered is {{ email }}!</p>
+
+
