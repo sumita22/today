@@ -1,0 +1,52 @@
+
+
+.left{
+    width: 90%;
+    height: 480px;
+    background: url(../../assets/images/girl.png) no-repeat center / cover;
+     
+    border-radius: 8px;
+    /* background-color: rgb(144, 6, 3); */
+    animation:fade-in-left 1s cubic-bezier(.39,.575,.565,1.000) both
+
+}
+.left2{
+    width: 90%;
+    height: 480px;
+    background: url(../../assets/images/girl.png) no-repeat center / cover;
+    z-index: 999;
+    position: absolute;
+    /* background-color: rgb(144, 6, 3); */
+
+}
+
+
+
+.vrclassleft{
+    height: 600px;  margin-top: 10px; width: 1px;  width: 2px;
+    animation-name: vrleftmove;
+    animation-duration: 1s;
+}
+
+@keyframes vrleftmove {
+  from { opacity: 0; margin-left: -50px;}
+  to { opacity: 0.8; margin-left:0px ;}
+}
+
+.buttonstyle{
+    background-color: rgb(144, 6, 3);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+.buttonstyle:hover{
+    color:rgb(144, 6, 3) ;
+    background-color: white;
+    border: 2px solid rgb(144, 6, 3);
+    font-weight: bolder;
+    font-size: larger;
+    /* translate: 2; */
+    transition: .4s ease-out; 
+}
+

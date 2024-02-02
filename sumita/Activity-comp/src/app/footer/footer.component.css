@@ -1,0 +1,4 @@
+/* vertical ruler */
+.vrclass{
+    height: 60px; margin-left: 35px; margin-top: 10px; width: 3px; color: rgb(54, 53, 53);
+}
