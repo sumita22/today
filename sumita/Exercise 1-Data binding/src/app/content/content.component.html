@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="col-12">
+        <div class="row  mt-3">
+            <div class="col-md-4 col-lg-3  ">
+                <h6>Showing 45 applicants</h6>
+                <p style="color:#8A8A8A;">Based your preferences</p>
+            </div>
+            <!-- button groups -->
+            <div class = " col-sm-4 col-md-6 ">
+                <button type = "button"  id="All" (click)="filter('All')"   class = "btn btn-primary rounded btn-sm me-3 ">All</button>
+                <button type = "button" id="Pending" (click)="filter('Pending')"class = "btn btn-primary rounded btn-sm me-3 ">Pending</button>
+                <button type = "button" id="OnHold" (click)="filter('On-Hold')" class = "btn btn-primary rounded btn-sm me-3 ">OnHold</button>
+                <button type = "button" id="Candidate" (click)="filter('Candidate')" class = "btn btn-primary rounded btn-sm me-3 ">Candidate</button>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+<!-- container that includes jobs table -->
+<div class="container bg-white">
+
+    <!-- jobs row header -->
+    <div class="row">
+        <div class="col fw-bold text-center">ID</div>
+        <div class="col-2 fw-bold">Date Applied</div>
+        <div class="col-2  fw-bold">Company</div>
+        <div class="col fw-bold">Type</div>
+        <div class="col fw-bold">Position</div>
+        <div class="col fw-bold">Contact</div>
+        <div class="col fw-bold">Status</div>
+    </div>
+    <hr>
+    <!-- if condition to check whether there are jobs inside tempJobs array otherwise prints noJobsFound template -->
+    <div *ngIf="tempJobs.length > 0; else noJobsFound">
+
+        <!-- ngFor to loop between values -->
+        <div *ngFor="let list of tempJobs">
+            <div class="row">
+
+                <!-- job ID -->
+                <div class="col"><input type="checkbox" class="me-3">{{list.id}}</div>
+                <!-- Data Applied -->
+                <div class="col-2">{{list.dateApplied}}</div>
+                <!-- Company name -->
+                <div class="col-2 d-flex">
+                    <div class="me-1">
+                        <img src="../../assets/images/companyLogo.png" height="20px"width="20px">
+                    </div>
+                    <div>
+                        {{list.company}}
+                    </div>
+                </div>
+                <!-- Job type -->
+                <div class="col">{{list.type}}</div>
+                <!-- job Position -->
+                <div class="col">{{list.position}}</div>
+                <!-- Job contact logo -->
+                <div class="col d-flex">
+                        <i class="iconstyle me-2" *ngFor="let value of list.contact" [class]="getBootstrapIconClass(value)"></i>
+                </div>
+                <!-- job status -->
+                <div class="col " >
+                    <button [ngClass]="getClasses(list.status)" >{{list.status}}</button>
+                    <i class="bi bi-three-dots-vertical ml-3"></i>
+                </div>
+             </div>
+        </div>
+       
+    </div>
+</div>
+
+<!-- template that is executed when there are no jobs declared -->
+<ng-template #noJobsFound>
+    <p>No jobs found.</p>
+</ng-template>
+
+    

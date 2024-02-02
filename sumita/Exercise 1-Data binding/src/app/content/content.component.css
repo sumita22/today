@@ -1,0 +1,46 @@
+/* text decoration none for buttons */
+#All {
+    text-decoration: none;
+}
+#Pending {
+    text-decoration: none;
+}
+#OnHold{
+    text-decoration: none;
+}
+#Candidate{
+    text-decoration: none;
+}
+/* styles for contact column icons */
+.iconstyle{
+     background-color: white; border-radius: 50%; border: 1px solid gray; width: 35px; height: 35px; justify-content: center; align-items: center; display: flex; color: rgb(57, 12, 219);
+}
+/* styles for pending status */
+.pending{
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+}
+/* styles for onhold status */
+.onhold{
+    color: orange;
+    border: 1px solid orange;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+}
+/* styles for candidate status */
+.candidate{
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    text-align: center;
+    width: 90px;
+    height: 30px;
+    border: none;
+}
