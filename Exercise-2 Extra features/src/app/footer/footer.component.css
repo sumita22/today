@@ -1,0 +1,129 @@
+.foot{
+    background:crimson;
+    color: white;
+   
+}
+.icons {
+    /* border: 1px solid black; */
+    display: flex;
+    column-gap: 25px;
+    
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    color: white;
+    transition-property: outiline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+}
+
+.icon:hover i {
+    animation: shake .25s;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
+}
+
+.instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #205aeb 90%);
+    outline-color: #a02d76;
+    color: #fff;
+}
+
+.linkedin:hover {
+    background: #0077b5;
+    outline-color: #0077b5;
+    color: #fff;
+}
+
+.twitter:hover {
+    background: #1da1f2;
+    outline-color: #1da1f2;
+    color: #fff;
+}
+
+.github:hover {
+    background: black;
+    outline-color: black;
+    color: #fff;
+}
+
+.whatsapp:hover {
+    background: #2ea447;
+    outline-color: #2ea447;
+    color: #fff;
+}
+.foot .email-id {
+    width: fit-content;
+    border-bottom: 1px solid white;
+
+}
+
+
+.foot form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10%;
+}
+
+.foot form i {
+    font-size: 18px;
+    margin-right: 2%;
+    color: #fff;
+}
+
+.foot form input {
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+}
+
+.foot form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.foot ul li {
+    list-style: none;
+}
+
+.foot ul li a {
+    text-decoration: none;
+    color: white;
+    line-height: 2;
+}

@@ -1,0 +1,37 @@
+<!-- child content inside content component -->
+<div>
+    <app-childcontent (typeSelected)="OntypeSelected($event)"  [cmessage]="message" [showColorfulDiv]="isColorfulDivVisible" ></app-childcontent>
+</div>
+
+
+
+
+<div style="min-height: 600px; padding-top: 10px;">
+    <div class="row" >
+        <div class="col-12 mb-1 p-3 jobs" *ngFor="let item of filteredDetails" >
+            <div class="d-flex " >
+                <div class=""><img [src]="item.logo" width="50px"></div>
+                <div class="ms-2" style="width: 800px;">
+                    <h5>{{item.jobtitle}} </h5>
+                        <span class="text-primary fw-bold ">{{item.company}}</span>  
+                        <span class="text-muted fw-bold">&bull;{{item.location}}</span>  
+                </div>
+                <!-- bookmark -->
+                <div class="text-end"><img src="../../assets/images/bookmark.png" width="40px"></div>
+            </div>
+               <!-- job description -->
+               <p class="pt-3">{{item.description}}</p>
+                
+                
+                <span class="button ">{{item.type}}</span>
+                <span class="button">{{item.experience}}</span>
+                <span class="button">{{item.salary}}</span>
+                <span class="button">{{item.location}}</span>
+                <span class="button">{{item.site}}</span>
+              
+                <button type="button" class="btn btn-info ms-5"  (click)="jobapplied(item.jobtitle,item.company)">Apply Now</button>
+            
+            
+        </div>
+    </div>
+</div>

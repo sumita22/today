@@ -1,0 +1,20 @@
+<div class="searchBox d-flex">
+    <div>
+        <h3><i class="bi bi-search text-primary me-4 mb-1"></i></h3>
+    </div>
+    <div>
+        <span class="jobTitle" (click)="selectType('All')">All</span>
+        <span  class="jobTitle" (click)="selectType('Dot Net Developer')">Dot Net Developer</span>
+        <span  class="jobTitle" (click)="selectType('Java Developer')">Java Developer</span>
+        <span  class="jobTitle" (click)="selectType('Angular Developer')">Angular Developer</span>
+        <span  class="jobTitle" (click)="selectType('UX Designer')">UX Designer</span>
+        <p></p>
+        <p *ngIf="showColorfulDiv" class="colorful-div">{{cmessage}}</p>
+        <ng-template #elseBlock>
+            
+          </ng-template>
+    </div>
+    
+</div>
+
+
