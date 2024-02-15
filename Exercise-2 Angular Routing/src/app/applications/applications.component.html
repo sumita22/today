@@ -1,0 +1,24 @@
+
+<div class="container-fluid bg-light">
+    
+   <h4>Find Applicants</h4>
+    <!-- textbox to search -->
+    <input type="text" [(ngModel)]="searchName" (input)="filterApplicants(searchName)" class="form-control mt-2" placeholder="Search by name">
+        
+    <!-- showing number of applicants -->
+    <p class="mt-3">Showing {{count}} Applicants</p>
+    
+    <!-- displaying applicant details based on search value searchName -->
+    <div class="row" >
+        <div class="col-6 mt-3 " *ngFor="let item of filteredApplicants">
+            <div class="cards text-center mx-auto" style="border: 1px solid blanchedalmond; box-shadow: 10px 10px 10px rgb(238, 236, 236);  width: 300px;border-radius: 10px;">
+                <img [src]="item.image" width="100px" class="mx-auto mt-2">
+                <h4 class="text-center">{{item.name}}</h4>
+                <p>{{item.place}}</p>
+                <p>{{item.degree}}</p>
+                <p>{{item.year}}</p>
+                <button type="button" class="btn btn-outline-primary">View</button>
+            </div>
+        </div>
+    </div>
+</div>

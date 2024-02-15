@@ -1,0 +1,24 @@
+
+<div class="container-fluid bg-light">
+    
+    <h4>Find Company Member</h4>
+     <!-- textbox to search -->
+     <input type="text" [(ngModel)]="searchName" (input)="filterApplicants(searchName)" class="form-control mt-2" placeholder="Search by Name or ID">
+         
+     <!-- showing number of members -->
+     <p class="mt-3">Showing {{count}} members</p>
+     
+     <!-- displaying applicant details based on search value searchName -->
+     <div class="row" >
+         <div class="col-6 mt-3 " *ngFor="let item of filteredApplicants">
+             <div class="cards text-center mx-auto" style="border: 1px solid blanchedalmond; box-shadow: 10px 10px 10px rgb(238, 236, 236);  width: 300px;border-radius: 10px;">
+                 <img [src]="item.image" width="100px" class="mx-auto mt-2">
+                 <h4 class="text-center">{{item.name}}</h4>
+                 <p class="fw-bold">{{item.jobRole}}</p>
+                 <p>{{item.id}}</p>
+                 <p>{{item.email}}</p>
+                 <button type="button" class="btn btn-outline-primary">View</button>
+             </div>
+         </div>
+     </div>
+ </div>
